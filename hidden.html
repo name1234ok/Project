@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mùa hè năm 2024</title>
+  
+</head>
+<body>
+  <style>
+    body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  animation: blinking 5s infinite;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.in {
+  text-align: center;
+}
+
+input {
+  border-style: solid;
+  border-color: #E0B317;
+}
+
+#luu_y {
+  text-align: center;
+}
+
+.thong_bao {
+  color: red;
+}
+
+.time {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes blinking {
+  0% { color: red; }
+  25% { color: orange; }
+  50% { color: blue; }
+  75% { color: green; }
+  100% { color: rgba(212, 24, 24, 1); }
+}
+
+.show_time {
+  display: flex;
+  margin-left: 150px;
+}
+
+.animated-text {
+    display: inline-block;
+    
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
+    /*font-family: 'Courier New', Courier, monospace;*/
+    font-size: 20px;
+    margin: 10px 0;
+    opacity: 0;
+    white-space: pre-wrap;  /* Cho phép xuống dòng */
+    word-break: break-word;  
+}
+
+@keyframes typing {
+    from { 
+        width: 0;
+    }
+    to { 
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to { 
+        border-color: transparent;
+    }
+    50% { 
+        border-color: black;
+    }
+}
+
+
+  </style>
+
+    
+  </div>
+  <div id='web2'>
+    <h1>!!</h1>
+    
+    <strong><p class='time'>Mùa hè, ngày 4 tháng 7 năm 2024.</p></strong>
+    <div class='dong_nhan'>
+      <p class='animated-text'>
+        Tôi là học sinh lớp A, trường THCS Mỹ Châu. Năm ấy là năm tôi lớp 9.
+        Mọi chuyện sẽ rất bình thường nếu tôi cứ mãi học ở lớp 9A. Nhưng không, đến giữa và cuối năm thì nhà trường bắt đầu xếp lớp theo năng lực. Tôi được xếp vào lớp 9.3. Lúc đầu thì cũng khá là bình thường cho tới khi tôi được giáo viên dạnh anh(cô Thương) chuyển chỗ ngồi ngay trên cô ấy. Lúc đầu thì tôi cũng không để ý tới cô ấy. Tôi là người ít nói nhưng đó chỉ là tôi ở lớp 6, 7, 8, lên lớp 9 thì tôi nói chuyện khá nhiều.
+        <br>
+        Hôm đó, trong giờ học anh. Tôi đang trêu đùa cùng mấy đứa xung quanh và rồi cô ấy nói với tôi: 'Thầy cô nói lớp A nói chuyện ít lắm mà.' (Tôi chỉ nhớ sơ sơ như vậy). Và từ đó tôi đã thích cô ấy. Nhưng tôi không nói với ai kể cả cô ấy. Khi bạn bè trêu tôi là tôi thích cô ấy thì tôi vẫn luôn chối.
+        <br>
+        Năm ấy là năm chúng tôi cuối cấp. Nhà trường cho học sinh đăng kí chọn nguyện vọng. Tôi rất buồn khi nguyện của cô ấy khác với tôi. Tôi cũng muốn nói với cô ấy là tôi thích em, nhưng tôi không có đủ can đảm.
+        <br>
+        Sau đó năm học cũng đã kết thúc và tôi không có bất kì thông tin liên lạc hay địa chỉ nhà của em. Tôi mong được gặp lại em.
+        <br>
+        
+        
+      </p>
+      
+      
+      
+        
+      
+      
+        
+      
+    </div>
+
+    <iframe src="https://www.boomplay.com/embed/63420630/MUSIC?colType=5&colID=26995266" width="100%" height="420" frameborder="0"></iframe>
+
+  <iframe src="https://www.boomplay.com/embed/118394998/MUSIC?colType=5&colID=65107104" width="100%" height="420" frameborder="0"></iframe>
+  </div>
+  
+
+  <script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const texts = document.querySelectorAll('.animated-text');
+    let delay = 0;
+
+    texts.forEach((text, index) => {
+        const letters = text.textContent.split('');
+        text.textContent = '';
+        
+        letters.forEach((letter, i) => {
+            setTimeout(() => {
+                text.textContent += letter;
+            }, 25 * i);
+        });
+
+        setTimeout(() => {
+            text.style.opacity = 1;
+        }, delay);
+
+        delay += letters.length * 100 + 500;  // Adjust delay for next text
+    });
+});
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
