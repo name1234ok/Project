@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+<style>
+body {
+  background: linear-gradient(to right,  orange, #CCA11A, #E3D20C);
+  color: white;
+}
+
+nav {
+  color: white;
+  
+}
+
+a {
+  color: white;
+}
+
+.head {
+  display: flex;
+}
+
+li {
+  display: inline;
+  
+}
+/*
+nav {
+  margin-top: 0;
+  padding-top: 0;
+  display: inline;
+}
+*/
+img {
+  width: 100px;
+  
+}
+
+
+
+.logo {
+  padding-top: 6px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.thong_tin {
+  position: relative;
+}
+
+.facebook {
+  margin-right: 15px;
+  
+}
+
+
+
+body {
+  
+  align-items: center;
+}
+
+.discord {
+  margin-right: 15px;
+}
+
+.facebook_ing .facebook_link {
+  position: absolute;
+  object-fit: cover;
+}
+
+.lien_ket {
+  text-align: right;
+}
+
+.thong_tin_link {
+  text-align: center;
+  
+}
+
+.all_thong_tin {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+#title {
+  /*display: inline-block;*/
+  text-align: center;
+  font-size: 30px;
+  
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://i.imgur.com/dC3l7oL.gif" type="image/x-icon">
+</head>
+
+<body>
+  <div class = 'container'>
+    <header>
+      <div class = 'head'>
+      
+       <div class = 'logo'>
+          <a href = 'http://hngoc29.unaux.com//'><img src = 'https://i.imgur.com/DgPyRO6.png' alt=" H.Ngoc logo" width="100"></a>
+       </div>
+       <div class = 'lien_ket'>
+        <nav>
+          <ul>
+            <li><a href = 'http://hngoc29.unaux.com/'>Home</a></li>
+            <li><a href = 'http://hngoc29.unaux.com/important'>Important</a></li>
+            
+          </ul>
+          
+        </nav>
+       </div>
+      </div>
+      <h1 id = 'title'></h1>
+    </header>
+    
+  </div>
+  <div class = 'all_thong_tin'>
+  <h2 id = 'thong_tin'>Thông Tin</h2>
+  <div class = 'thong_tin'>
+    <div class='thong_tin_link'>
+    <a href = 'https://www.facebook.com/ngoc29FPG'><img src ='https://i.imgur.com/hkCNVU3.png' alt="Facebook" width="20" class = 'facebook facebook_link img_hover'></a>
+    <a href = 'https://discord.com/invite/uXvC8SFC'><img src ='https://i.imgur.com/RuyGIG7.png' alt="Discord" width="20" class = 'discord discord_link img_hover'></a>
+    <a href = 'https://github.com/name1234ok/Full-Stack-'><img src ='https://i.imgur.com/f4ZKt96.png' alt="github" width="20" class = 'github github_link img_hover'></a
+    </div>
+    </div>
+  </div>
+  <script>
+const texts = ["Hello, World!","Welcome to My Website", "I’m H.Ngoc", "I’m Dev"];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type() {
+    if (count === texts.length) {
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("title").textContent = letter;
+    if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(() => {
+            document.getElementById("title").style.animation = 'none'; // Stop animation temporarily
+            document.getElementById("title").offsetHeight; // Trigger reflow
+            document.getElementById("title").style.animation = ''; // Restart animation
+        }, 8000); // Pause before next word
+    }
+    setTimeout(type, 220); // Speed of typing
+}());
+
+</script>
+</body>
+
+</html>
